@@ -1,37 +1,38 @@
-Flutter Simple E-commerce App - Tutorial Lengkap
+Markdown
+
+# Flutter Simple E-commerce App - Tutorial Lengkap
+
 Aplikasi e-commerce sederhana ini dibangun menggunakan Flutter, dirancang untuk pemula yang ingin memahami alur kerja aplikasi e-commerce dari UI hingga integrasi dasar. Aplikasi ini menampilkan desain UI/UX yang bersih dan konsisten dengan tema gradien yang menarik, mencakup halaman login, daftar produk, dan detail produk.
 
-Fitur Utama
-Halaman Login Interaktif: Desain login yang modern dengan latar belakang gradien, input field yang stylish, dan tombol login yang responsif.
+---
 
-Daftar Produk Dinamis: Menampilkan daftar produk dengan harga dan ikon keranjang, menggunakan desain card yang konsisten dengan tema aplikasi.
+## Fitur Utama
 
-Halaman Detail Produk: Menampilkan informasi detail tentang produk, termasuk gambar, harga, deskripsi, dan tombol "Tambahkan ke Keranjang".
+* **Halaman Login Interaktif:** Desain login yang modern dengan latar belakang gradien, input field yang stylish, dan tombol login yang responsif.
+* **Daftar Produk Dinamis:** Menampilkan daftar produk dengan harga dan ikon keranjang, menggunakan desain card yang konsisten dengan tema aplikasi.
+* **Halaman Detail Produk:** Menampilkan informasi detail tentang produk, termasuk gambar, harga, deskripsi, dan tombol "Tambahkan ke Keranjang".
+* **Tema Gradien Konsisten:** Seluruh aplikasi menggunakan tema gradien merah muda/ungu yang memberikan tampilan modern dan terpadu.
+* **Integrasi API Sederhana:** Struktur untuk mengintegrasikan data produk dari API eksternal.
 
-Tema Gradien Konsisten: Seluruh aplikasi menggunakan tema gradien merah muda/ungu yang memberikan tampilan modern dan terpadu.
+## Prasyarat
 
-Integrasi API Sederhana: Struktur untuk mengintegrasikan data produk dari API eksternal.
-
-Prasyarat
 Sebelum menjalankan proyek ini, pastikan Anda memiliki perangkat lunak berikut terinstal di sistem Anda:
 
-Flutter SDK: Ikuti panduan instalasi resmi Flutter: https://flutter.dev/docs/get-started/install
+* **Flutter SDK:** Ikuti panduan instalasi resmi Flutter: [https://flutter.dev/docs/get-started/install](https://flutter.dev/docs/get-started/install)
+* **Git:** Unduh dan instal dari: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+* **Visual Studio Code (VS Code):** Unduh dari: [https://code.visualstudio.com/](https://code.visualstudio.com/) (atau IDE pilihan Anda)
+* **Ekstensi Flutter dan Dart untuk VS Code.**
 
-Git: Unduh dan instal dari: https://git-scm.com/downloads
+## Memulai Proyek
 
-Visual Studio Code (VS Code): Unduh dari: https://code.visualstudio.com/ (atau IDE pilihan Anda)
-
-Ekstensi Flutter dan Dart untuk VS Code.
-
-Memulai Proyek
 Ikuti langkah-langkah di bawah ini untuk mengkloning dan menjalankan aplikasi ini di lingkungan pengembangan lokal Anda.
 
-1. Kloning Repositori
-Buka terminal atau Command Prompt Anda, navigasikan ke direktori tempat Anda ingin menyimpan proyek, lalu kloning repositori ini. Pastikan Anda mengganti ufebb dengan username GitHub Anda dan flutter-simple-shop dengan nama repositori Anda yang sebenarnya.
+### 1. Kloning Repositori
 
-Bash
+Buka terminal atau Command Prompt Anda, navigasikan ke direktori tempat Anda ingin menyimpan proyek, lalu kloning repositori ini. Pastikan Anda mengganti `ufebb` dengan username GitHub Anda dan `flutter-simple-shop` dengan nama repositori Anda yang sebenarnya.
 
-git clone https://github.com/ufebb/flutter-simple-shop.git
+```bash
+git clone [https://github.com/ufebb/flutter-simple-shop.git](https://github.com/ufebb/flutter-simple-shop.git)
 2. Navigasi ke Direktori Proyek
 Masuk ke direktori proyek yang baru saja Anda kloning:
 
@@ -627,7 +628,7 @@ class ProductDetailPage extends StatelessWidget {
                   color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(15), // Rounded corners
                   boxShadow: [
-                    BoxShadow(
+                    BoxBoxShadow(
                       color: Colors.black.withOpacity(0.2),
                       blurRadius: 8,
                       offset: Offset(0, 4),
@@ -752,10 +753,10 @@ class Product {
       // Berikan fallback jika 'images' null atau kosong
       image: json['images'] != null && (json['images'] as List).isNotEmpty
           ? json['images'][0] as String
-          : 'https://via.placeholder.com/250', // Fallback image untuk detail
+          : '[https://via.placeholder.com/250](https://via.placeholder.com/250)', // Fallback image untuk detail
       // Asumsi 'thumbnail' adalah String
       // Berikan fallback jika 'thumbnail' null
-      thumbnail: json['thumbnail'] as String? ?? 'https://via.placeholder.com/50', // Fallback thumbnail untuk list
+      thumbnail: json['thumbnail'] as String? ?? '[https://via.placeholder.com/50](https://via.placeholder.com/50)', // Fallback thumbnail untuk list
     );
   }
 }
@@ -792,7 +793,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter_simple_shop/models/product.dart';
 
 class Api {
-  static const String _baseUrl = 'https://dummyjson.com'; // Contoh API dummy
+  static const String _baseUrl = '[https://dummyjson.com](https://dummyjson.com)'; // Contoh API dummy
 
   static Future<List<Product>> fetchProducts() async {
     try {
